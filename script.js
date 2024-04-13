@@ -102,6 +102,7 @@ function prevCurrentCode() {
 }
 
 mainButton.addEventListener("touchstart", showCode);
+mainButton.addEventListener("touchend", hideCode);
 
 mainButton.addEventListener("mousedown", showCode);
 mainButton.addEventListener("mouseup", hideCode);
