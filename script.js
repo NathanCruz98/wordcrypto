@@ -101,6 +101,7 @@ function prevCurrentCode() {
 	// console.log(currentCodeIndex);
 }
 
+mainButton.addEventListener("touchstart", showCode);
 
 mainButton.addEventListener("mousedown", showCode);
 mainButton.addEventListener("mouseup", hideCode);
