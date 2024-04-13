@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Decryptid</title>
+		<link rel="stylesheet" href="./styles.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="title">
+				<h1>Decryptid</h1>
+			</div>
+			<div class="settings">
+				<label for="codesize">Code Size: </label>
+				<select name="codesize" id="codesize">
+					<option value="3">3</option>
+					<option value="4" selected>4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="reset">
+				<button type="button" id="resetButton">Load/Reset</button>
+			</div>
+		</div>
+		<div class="mainscreen">
+			<div class="codescreen">
+				<h2 class="codeText" id="codeText">-.-.-</h2>
+			</div>
+			<div class="codebuttons">
+				<button type="button" id="prevButton">Prev</button>
+				<button type="button" id="nextButton">Next</button>
+			</div>
+		</div>
+		<div class="mainbutton">
+				<button type="button" id="historyButton">H</button>
+				<button type="button" id="mainButton">VIEW</button>
+				<input type="checkbox" id="toggleCheckbox"></button>
+				<label id="toggleText" for="toggleCheckbox">Toggle</label>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

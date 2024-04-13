@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+}
+.navbar {
+	background-color: #146b12;
+	height: 10%;
+	overflow: hidden;
+	padding-bottom: 2%;
+	text-align: center;
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.title {
+	font-size: 16px;
+	padding-left: 3%;
+	grid-row: 1 / 3;
+}
+
+.settings {
+	font-size: 20px;
+	padding-top: 20px;
+	padding-right: 3%;
+}
+
+#resetButton {
+	padding: 5px 20px;
+}
+
+.codescreen {
+	background-color: #0a3b09;
+	border-radius: 50px;
+	color: #30ff2b;
+	font-size: 36px;
+	margin: 20px 20px 12px 20px;
+	padding: 80px;
+	text-align: center;
+}
+
+.codebuttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.codebuttons button {
+	font-size: 24px;
+	margin: 0 8px;
+	padding: 6px 40px;
+}
+
+.mainbutton {
+	background-color: #404040;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	margin-top: 12px;
+}
+
+.mainbutton #historyButton {
+	font-size: 24px;
+	padding: 5px 10px;
+}
+
+.mainbutton #mainButton {
+	font-size: 24px;
+	padding: 56px 40px;
+	margin: 0 0.5rem;
+	border-radius: 50%
+}
+
+.mainbutton #toggleCheckbox {
+	height: 30px;
+	width: 30px;
+}
+
+#toggleText {
+	text-orientation: upright;
+	font-size: 16px;
+}
