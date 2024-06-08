@@ -1,83 +1,131 @@
-body {
-	margin: 0;
-}
-.navbar {
-	background-color: #146b12;
-	height: 10%;
-	overflow: hidden;
-	padding-bottom: 2%;
-	text-align: center;
-	
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+:root {
+	--small-font: clamp(1rem, min(3vw, 5vh), 2.5rem);
+	--large-font: clamp(1rem, min(8vw, 6vh), 3.5rem);
 }
 
-.title {
-	font-size: 16px;
-	padding-left: 3%;
-	grid-row: 1 / 3;
+body {
+	font-family: "Space Mono", Arial, system-ui;
+	margin: 0;
+}
+
+
+/*navbar Flexbox*/
+
+header {
+	background-color: #146b12;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	height: clamp(2.5rem, 10vh, 10vh);
+	padding: 0 2%;
+}
+
+#title {
+	font-size: var(--large-font);
 }
 
 .settings {
-	font-size: 20px;
-	padding-top: 20px;
-	padding-right: 3%;
+	font-size: var(--small-font);
 }
 
-#resetButton {
-	padding: 5px 20px;
+
+/*mainScreen Grid*/
+
+#mainScreen {
+	height: 62vh;
+	
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	gap: 5%;
+	
+	margin: min(4vw, 4vh)
 }
 
-.codescreen {
+#codeScreen::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 14vh;
+	left: 2vw;
+	bottom: 38vh;
+	right: 2vw;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	z-index: 2;
+	background-size: 100% 2px, 3px 100%;
+	pointer-events: none;
+}
+
+#codeScreen {
 	background-color: #0a3b09;
-	border-radius: 50px;
 	color: #30ff2b;
-	font-size: 36px;
-	margin: 20px 20px 12px 20px;
-	padding: 80px;
+	
+	grid-column: span 3;
+	grid-row: span 7;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	border-radius: 40px;
+}
+
+#codeText {
+	font-family: "Press Start 2P", Arial, system-ui;
+	font-size: clamp(1.5rem, 4vh, 4vh);
 	text-align: center;
 }
 
-.codebuttons {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+#mainScreen button {
+	grid-row: 8;
+	
+	font-family: "Space Mono", Arial, system-ui;
+	font-size: var(--small-font);
+	padding: 6px 24px;
 }
 
-.codebuttons button {
-	font-size: 24px;
-	margin: 0 8px;
-	padding: 6px 40px;
-}
+/*mainButtons Flexbox*/
 
-.mainbutton {
-	background-color: #404040;
+#mainButtons {
+	background-color: #505050;
+	
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	padding: 30px;
-	margin-top: 12px;
+	
+	height: clamp(4rem, 15vh, 15vh);
 }
 
-.mainbutton #historyButton {
-	font-size: 24px;
-	padding: 5px 10px;
+#timerButton {
+	font-family: "Space Mono", Arial, system-ui;
+	font-size: var(--large-font);
+	height: clamp(2rem, 6vh, 6vh);
+	width: clamp(2rem, 6vh, 6vh);
 }
 
-.mainbutton #mainButton {
-	font-size: 24px;
-	padding: 56px 40px;
-	margin: 0 0.5rem;
-	border-radius: 50%
+#viewButton {
+	font-family: "Space Mono", Arial, system-ui;
+	font-size: var(--large-font);
+	height: clamp(4rem, 13vh, 13vh);
+	width: clamp(4rem, 13vh, 13vh);
+	border-radius: 50%;
+	margin: 0 1.5vw;
 }
 
-.mainbutton #toggleCheckbox {
+#toggleCheckbox {
 	height: 30px;
 	width: 30px;
 }
 
-#toggleText {
-	text-orientation: upright;
-	font-size: 16px;
+#toggleView {
+	
+	height: clamp(2rem, 6vh, 6vh);
+	width: clamp(2rem, 6vh, 6vh);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	font-size: var(--small-font);
 }

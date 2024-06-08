@@ -3,40 +3,53 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="Description" content="A web app design to handle the various components of the Decrypto tabletop game">
 		<title>Decryptid</title>
 		<link rel="stylesheet" href="./styles.css"/>
+		<!--Google Font: Press Start 2P-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<!--Google Font: Space Mono-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div class="navbar">
-			<div class="title">
-				<h1>Decryptid</h1>
-			</div>
-			<div class="settings">
-				<label for="codesize">Code Size: </label>
-				<select name="codesize" id="codesize">
-					<option value="3">3</option>
-					<option value="4" selected>4</option>
-					<option value="5">5</option>
+		<!--Header
+			Contains the app title and code size option
+		-->
+		<header>
+			<h1 id="title">Decryptid</h1>
+			<div>
+				<label for="codeSize" class="settings">Code Size: </label>
+				<select id="codeSize" class="settings">
+					<option value="2">2</option>
+					<option value="3" selected>3</option>
+					<option value="4">4</option>
 				</select>
 			</div>
-			<div class="reset">
-				<button type="button" id="resetButton">Load/Reset</button>
+		</header>
+		<!--DIV: mainScreen
+			Contains the code screen and various buttons
+		-->
+		<div id="mainScreen">
+			<div id="codeScreen">
+				<h2 id="codeText">-.-.-</h2>
 			</div>
+			<button type="button" id="newCodeButton" class="screen-button">New Code</button>
+			<button type="button" id="codeHistoryButton" class="screen-button">Code History</button>
+			<button type="button" id="wordListButton" class="screen-button">Word List</button>
 		</div>
-		<div class="mainscreen">
-			<div class="codescreen">
-				<h2 class="codeText" id="codeText">-.-.-</h2>
-			</div>
-			<div class="codebuttons">
-				<button type="button" id="prevButton">Prev</button>
-				<button type="button" id="nextButton">Next</button>
-			</div>
-		</div>
-		<div class="mainbutton">
-				<button type="button" id="historyButton">H</button>
-				<button type="button" id="mainButton">VIEW</button>
+		<!--DIV: mainButtons
+			Contains the view button and timer button
+		-->
+		<div id="mainButtons">
+			<button type="button" id="timerButton">T</button>
+			<button type="button" id="viewButton">VIEW</button>
+			<div id="toggleView">
+				<label for="toggleCheckbox" id="toggleText">Toggle</label>
 				<input type="checkbox" id="toggleCheckbox"></button>
-				<label id="toggleText" for="toggleCheckbox">Toggle</label>
 			</div>
 		</div>
 		<script src="./script.js"></script>
