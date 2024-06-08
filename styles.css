@@ -1,5 +1,6 @@
 :root {
-	--small-font: clamp(1rem, min(3vw, 5vh), 2.5rem);
+	--small-font: clamp(1rem, min(3vw, 5vh), 2rem);
+	--medium-font: clamp(1rem, min(3vw, 5vh), 2.5rem);
 	--large-font: clamp(1rem, min(8vw, 6vh), 3.5rem);
 }
 
@@ -27,7 +28,7 @@ header {
 }
 
 .settings {
-	font-size: var(--small-font);
+	font-size: var(--medium-font);
 }
 
 
@@ -82,7 +83,7 @@ header {
 	grid-row: 8;
 	
 	font-family: "Space Mono", Arial, system-ui;
-	font-size: var(--small-font);
+	font-size: var(--medium-font);
 	padding: 6px 24px;
 }
 
@@ -100,14 +101,14 @@ header {
 
 #timerButton {
 	font-family: "Space Mono", Arial, system-ui;
-	font-size: var(--large-font);
+	font-size: var(--small-font);
 	height: clamp(2rem, 6vh, 6vh);
 	width: clamp(2rem, 6vh, 6vh);
 }
 
 #viewButton {
 	font-family: "Space Mono", Arial, system-ui;
-	font-size: var(--large-font);
+	font-size: var(--small-font);
 	height: clamp(4rem, 13vh, 13vh);
 	width: clamp(4rem, 13vh, 13vh);
 	border-radius: 50%;
@@ -127,5 +128,6 @@ header {
 	flex-direction: column;
 	align-items: center;
 	
-	font-size: var(--small-font);
+	/*Special Small Size Font*/
+	font-size: clamp(1rem, min(3vw, 5vh), 1.25rem);
 }
