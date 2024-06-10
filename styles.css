@@ -45,6 +45,7 @@ header {
 	margin: min(4vw, 4vh)
 }
 
+/* -- Removed Feature: Scanline Filter
 #codeScreen::before {
 	content: " ";
 	display: block;
@@ -58,6 +59,7 @@ header {
 	background-size: 100% 2px, 3px 100%;
 	pointer-events: none;
 }
+*/
 
 #codeScreen {
 	background-color: #0a3b09;
