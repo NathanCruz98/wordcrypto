@@ -1,1 +1,1 @@
-Access with: [http://itsburpee.github.io/decryptid](https://itsburpee.github.io/decryptid/)
+Access with: [http://itsburpee.github.io/wordcrypto](https://itsburpee.github.io/wordcrypto/)
