@@ -17,9 +17,9 @@ Access the web app with: [http://itsburpee.github.io/wordcrypto](https://itsburp
 - Once the `Code Size` is set, press `New Code` to generate a digit code for your **Decrypto** game!
   - To ensure a fair distribution of numbers present, the `New Code` shuffles a number array with the Fisher-Yates Algorithm
 - To view the digit code hold down the `VIEW` button or use the `Toggle` option
-- Once you've written your clues based on the digit code, press the `T` button to set up a timer for your opponent
+- Once you've written your clues based on the digit code, press the `⏱` button to set up a timer for your opponent
   - To prevent timer interruptions, the other buttons on this web app will be disabled during countdown
-  - To turn off the timer, press the `T` button while the timer is going
+  - To turn off the timer, press the `⏱` button while the timer is going
 - Should you want to see older digit codes or you accidently generate a new code, you can press `Code History` to see the last 4 code viewed
   - If a code was never viewed, it isn't archived
   - The codes are ordered from the most recent code to the oldest code
