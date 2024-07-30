@@ -1,135 +1,46 @@
-:root {
-	--small-font: clamp(1rem, min(3vw, 5vh), 2rem);
-	--medium-font: clamp(1rem, min(3vw, 5vh), 2.5rem);
-	--large-font: clamp(1rem, min(8vw, 6vh), 3.5rem);
+.card {
+    margin: 2dvh 2dvw;
+    min-height: 40dvh;
+    height: 120dvh;
 }
 
-body {
-	font-family: "Space Mono", Arial, system-ui;
-	margin: 0;
+#screen-buttons > button {
+    min-width: 6rem;
+    min-height: 3rem;
 }
 
+#view-button {
+    min-width: 6rem;
+    min-height: 6rem;
+}
 
-/*navbar Flexbox*/
-
-header {
-	background-color: #146b12;
-	
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	
-	height: clamp(2.5rem, 10vh, 10vh);
-	padding: 0 2%;
+#main-buttons > #timer-button, #toggle-text {
+    min-width: 4.5rem;
+    min-height: 4.5rem;
 }
 
 #title {
-	font-size: var(--large-font);
+    font-size: 2.5rem;
+    font-family: "Space Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.settings {
-	font-size: var(--medium-font);
+#code-size-text {
+    font-size: 2rem;
 }
 
-
-/*mainScreen Grid*/
-
-#mainScreen {
-	height: 62vh;
-	
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(8, 1fr);
-	gap: 5%;
-	
-	margin: min(4vw, 4vh)
+#code-text {
+    font-size: clamp(1.5rem, 2vw, 6rem);
+    text-align: center;
+    font-family: "Press Start 2P", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* -- Removed Feature: Scanline Filter
-#codeScreen::before {
-	content: " ";
-	display: block;
-	position: absolute;
-	top: 14vh;
-	left: 2vw;
-	bottom: 38vh;
-	right: 2vw;
-	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-	z-index: 2;
-	background-size: 100% 2px, 3px 100%;
-	pointer-events: none;
-}
-*/
+@media screen and (max-width: 576px) {
+    #title {
+        font-size: 1.5rem;
+    }
+    
+    #code-size-text {
+        font-size: 1rem;
+    }
 
-#codeScreen {
-	background-color: #0a3b09;
-	color: #30ff2b;
-	
-	grid-column: span 3;
-	grid-row: span 7;
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	border-radius: 40px;
-}
-
-#codeText {
-	font-family: "Press Start 2P", Arial, system-ui;
-	font-size: clamp(1.5rem, 4vh, 4vh);
-	text-align: center;
-}
-
-#mainScreen button {
-	grid-row: 8;
-	
-	font-family: "Space Mono", Arial, system-ui;
-	font-size: var(--medium-font);
-	padding: 6px 24px;
-}
-
-/*mainButtons Flexbox*/
-
-#mainButtons {
-	background-color: #505050;
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	height: clamp(4rem, 15vh, 15vh);
-}
-
-#timerButton {
-	font-family: "Space Mono", Arial, system-ui;
-	font-size: var(--small-font);
-	height: clamp(2rem, 6vh, 6vh);
-	width: clamp(2rem, 6vh, 6vh);
-}
-
-#viewButton {
-	font-family: "Space Mono", Arial, system-ui;
-	font-size: var(--small-font);
-	height: clamp(4rem, 13vh, 13vh);
-	width: clamp(4rem, 13vh, 13vh);
-	border-radius: 50%;
-	margin: 0 1.5vw;
-}
-
-#toggleCheckbox {
-	height: 30px;
-	width: 30px;
-}
-
-#toggleView {
-	
-	height: clamp(2rem, 6vh, 6vh);
-	width: clamp(2rem, 6vh, 6vh);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	
-	/*Special Small Size Font*/
-	font-size: clamp(1rem, min(3vw, 5vh), 1.25rem);
 }

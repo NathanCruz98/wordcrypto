@@ -1,16 +1,16 @@
 // Variables for the Header: Code Size
-const codeSize = document.getElementById('codeSize');
+const codeSize = document.getElementById('code-size');
 
 // Variables for the Main Screen Div: Code text, New Code Button, Code History Button, Word List Button
-const codeText = document.getElementById('codeText');
-const newCodeButton = document.getElementById('newCodeButton');
-const codeHistoryButton = document.getElementById('codeHistoryButton');
-const wordListButton = document.getElementById('wordListButton');
+const codeText = document.getElementById('code-text');
+const newCodeButton = document.getElementById('new-code-button');
+const codeHistoryButton = document.getElementById('code-history-button');
+const wordListButton = document.getElementById('word-list-button');
 
 // Variables for the Main Buttons Div: Timer Button, View Button, Toggle View Checkbox
-const timerButton = document.getElementById('timerButton');
-const viewButton = document.getElementById('viewButton');
-const toggleCheckbox = document.getElementById('toggleCheckbox');
+const timerButton = document.getElementById('timer-button');
+const viewButton = document.getElementById('view-button');
+const toggleCheckbox = document.getElementById('toggle-checkbox');
 
 // Variables for various code screen text aspects
 let codeArray = [1,2,3,4];
