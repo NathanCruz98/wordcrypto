@@ -25,6 +25,19 @@ let historyArray = [];
 // Placeholder for the timer interval function
 let timerInterval;
 
+let localWordList;
+
+$.ajax({
+	url: "test.txt",
+	dataType: "text",
+	success: function (data) {
+		localWordList = data.split("\n")
+	},
+	async: false
+});
+
+console.log(localWordList)
+
 
 /* FUNCTION: showCode()
 	- Shows the digit code on the main screen and turns on the "code viewed" flag
@@ -203,6 +216,33 @@ function warnCodeSize() {
 	- Does an API call to a word database to get a random assortment of words
     "The word database and endpoint was provided by Lucas Silbernagel"
 */
+async function getWordListAPI() {
+	let wordList = [];
+	let wordListString = "";
+	
+    //FOR: "Code Size" + 1 times, get random words from the word database
+	for (let i = 0; i < parseInt(codeSize.value) + 1; i++) {
+		const response = await fetch("https://www.wordgamedb.com/api/v1/words/random");
+		const randomWord = await response.json();
+		wordList.push(randomWord.word);
+	}
+	
+    // FOR: Create a string with the following format: "#. 'word'"
+	for (let i = 0; i < wordList.length; i++) {
+        // IF: this is first code, ignore the leading newline
+		if (i !== 0) {
+			wordListString += "\n";
+		}
+
+		wordListString += (i+1) + ": " + wordList[i];
+	}
+	
+	codeText.innerText = wordListString;
+}
+
+/* FUNCTION: getWordList()
+	- Reads a local file to get random words
+*/
 async function getWordList() {
 	let wordList = [];
 	let wordListString = "";
@@ -226,6 +266,7 @@ async function getWordList() {
 	
 	codeText.innerText = wordListString;
 }
+
 
 
 /* FUNCTION: toggleTimer()
