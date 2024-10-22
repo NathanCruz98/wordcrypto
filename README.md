@@ -8,7 +8,7 @@ Having to bring multiple boxes to play a variety of games can be cumbersome when
 There's a reason why a standard deck of cards is considered portable and this web app does the same with 2 of the most popular word board games on the market.
 
 ## Quick Start
-Access the web app with: [http://itsburpee.github.io/wordcrypto](https://itsburpee.github.io/wordcrypto/)
+Access the web app with: [https://nathancruz98.github.io/wordcrypto/](https://nathancruz98.github.io/wordcrypto/)
 
 ## How to Use
 - Set the `Code Size` you want to use then press `Word List` to generate a list of words
